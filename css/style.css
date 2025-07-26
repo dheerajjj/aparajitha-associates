@@ -420,6 +420,135 @@ section {
     box-shadow: var(--shadow-hover);
 }
 
+/* Panel Banks Section */
+.panel-banks {
+    background: var(--text-light);
+}
+
+.banks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.bank-card {
+    background: var(--text-light);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.bank-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold-color);
+}
+
+.bank-logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    position: relative;
+}
+
+.bank-logo img {
+    max-width: 180px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.bank-card:hover .bank-logo img {
+    transform: scale(1.05);
+}
+
+/* Fallback for when image doesn't load */
+.bank-logo::before {
+    content: "🏦";
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bank-logo img[src=""],
+.bank-logo img:not([src]) {
+    opacity: 0;
+}
+
+.bank-logo:has(img[src=""]) ::before,
+.bank-logo:has(img:not([src])) ::before {
+    opacity: 1;
+}
+
+.bank-info {
+    padding: 25px 20px;
+    background: var(--text-light);
+}
+
+.bank-info h4 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.bank-info p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.banks-trust {
+    margin-top: 50px;
+    text-align: center;
+    background: var(--bg-light);
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.trust-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trust-icon {
+    font-size: 3.5rem;
+    color: var(--gold-color);
+    margin-bottom: 25px;
+}
+
+.trust-text h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.trust-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    text-align: center;
+}
+
 .service-icon {
     width: 80px;
     height: 80px;
