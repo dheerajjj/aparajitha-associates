@@ -126,6 +126,17 @@ h6 { font-size: 1.2rem; }
     margin-right: 15px;
 }
 
+.logo-image {
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+    object-fit: contain;
+    border-radius: 8px;
+    /* Make logo same color as APARAJITHA text (white) */
+    filter: brightness(0) invert(1);
+    background: transparent;
+}
+
 .brand-text h1 {
     font-size: 1.8rem;
     margin-bottom: 0;
@@ -371,12 +382,22 @@ section {
 
 .about-image {
     position: relative;
+    height: 500px;
+    overflow: hidden;
 }
 
 .about-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
 }
 
 .experience-badge {
@@ -898,6 +919,17 @@ section {
     font-size: 2rem;
     color: var(--gold-color);
     margin-right: 15px;
+}
+
+.footer-logo-image {
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+    object-fit: contain;
+    border-radius: 6px;
+    /* Make logo same color as APARAJITHA text (white) */
+    filter: brightness(0) invert(1);
+    background: transparent;
 }
 
 .footer-logo h3 {

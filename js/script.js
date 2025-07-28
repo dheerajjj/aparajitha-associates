@@ -90,12 +90,29 @@ contactForm.addEventListener('submit', function(e) {
     const lastName = formData.get('lastName');
     const email = formData.get('email');
     const phone = formData.get('phone');
-    const service = formData.get('service');
+    const serviceCode = formData.get('service');
     const message = formData.get('message');
     const privacy = formData.get('privacy');
     
+    // Map service codes to full service names
+    const serviceNames = {
+        'corporate': 'Corporate Law',
+        'realestate': 'Real Estate Law',
+        'family': 'Family Law',
+        'criminal': 'Criminal Law',
+        'civil': 'Civil Litigation',
+        'documentation': 'Legal Documentation',
+        'other': 'Other'
+    };
+    
+    const service = serviceNames[serviceCode] || serviceCode;
+    
+    // Debug logging
+    console.log('Service Code:', serviceCode);
+    console.log('Mapped Service:', service);
+    
     // Basic validation
-    if (!firstName || !lastName || !email || !phone || !service || !message || !privacy) {
+    if (!firstName || !lastName || !email || !phone || !serviceCode || !message || !privacy) {
         alert('Please fill in all required fields and accept the privacy policy.');
         return;
     }
