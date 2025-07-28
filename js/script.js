@@ -157,7 +157,7 @@ contactForm.addEventListener('submit', function(e) {
         })
         .catch(function(error) {
             console.error('EmailJS error:', error);
-            alert('Sorry, there was an error sending your message. Please try again or call us directly at +91-8341445701.');
+            alert('Sorry, there was an error sending your message. Please try again or call us directly at +91-7675058983.');
         })
         .finally(function() {
             submitButton.textContent = originalText;
