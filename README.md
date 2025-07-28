@@ -1,9 +1,19 @@
-# Aparajitha Associates - Law Firm Website
+# 🏛️ Aparajitha Associates - An Advocate's Acumen
 
-**Tagline:** An Advocate's Acumen  
-**Location:** Nallakunta, Hyderabad
+**🌐 Domain:** [aparajithalaw.co.in](https://aparajithalaw.co.in)  
+**📍 Location:** Nallakunta, Hyderabad  
+**📧 Email:** dheeraj8453@gmail.com  
+**📞 Phone:** +91-8341445701
 
 A professional, modern website for Aparajitha Associates law firm, featuring elegant design and comprehensive legal service information.
+
+## 🚀 **DEPLOYMENT READY!**
+
+✅ **Domain Registered:** aparajithalaw.co.in (GoDaddy)  
+✅ **Files Prepared:** All website files ready for upload  
+✅ **Contact Form:** EmailJS configured and working  
+✅ **CNAME File:** Created for GitHub Pages  
+✅ **Deployment Guide:** Complete step-by-step instructions provided
 
 ## 🏛️ Features
 
