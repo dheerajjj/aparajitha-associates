@@ -133,7 +133,7 @@ contactForm.addEventListener('submit', function(e) {
     
     // Create email content
     const emailContent = {
-        to_email: 'dheeraj8453@gmail.com',
+        to_email: 'aparajitha.law@gmail.com',
         from_name: `${firstName} ${lastName}`,
         from_email: email,
         phone: phone,
