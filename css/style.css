@@ -199,7 +199,7 @@ h6 { font-size: 1.2rem; }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)), url('../images/main background.jpg');
+    background: linear-gradient(rgba(26, 26, 46, 0.6), rgba(22, 33, 62, 0.6)), url('../images/main background.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -209,6 +209,11 @@ h6 { font-size: 1.2rem; }
     align-items: center;
     position: relative;
     overflow: hidden;
+    /* Enhanced background properties for better image display */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .hero::before {
@@ -1056,6 +1061,12 @@ section {
     
     .nav-cta {
         display: none;
+    }
+    
+    /* Mobile-specific hero optimizations */
+    .hero {
+        background-attachment: scroll; /* Better performance on mobile */
+        min-height: 90vh; /* Slightly shorter on mobile for better UX */
     }
     
     .hero-text h1 {
